@@ -7,8 +7,6 @@ DOMAIN-KEYWORD,v6.gh-proxy
 DOMAIN,time.is
 DOMAIN-SUFFIX,pool.ntp.org
 DOMAIN-SUFFIX,nvidia.com
-DOMAIN-SUFFIX,pool.ntp.org
-DOMAIN-SUFFIX,xn--ngstr-lra8j.com
 DOMAIN-KEYWORD,ipv6tracker
 DOMAIN-KEYWORD,bittorrent
 DOMAIN-KEYWORD,torrent
