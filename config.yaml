@@ -1,7 +1,7 @@
 mixed-port: 7890
 redir-port: 9797
 tproxy-port: 9898
-ipv6: true
+ipv6: false
 mode: Rule
 allow-lan: false
 unified-delay: true
@@ -78,13 +78,12 @@ sniffer:
     - "Mijia Cloud" 
 
 tun:
-  enable: true
+  enable: false
   device: meta
   stack: mixed
   dns-hijack:
     - any:53
     - tcp://any:53
-  udp-timeout: 300
   auto-route: true
   strict-route: false
   auto-detect-interface: true
@@ -96,7 +95,7 @@ tun:
 
 dns:
   enable: true
-  ipv6: true
+  ipv6: false
   cache-algorithm: arc
   prefer-h3: false
   use-hosts: true
@@ -107,6 +106,7 @@ dns:
   fake-ip-range6: fdfe:dcba:9876::1/64
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
+    - RULE-SET,CN_域
     - RULE-SET,Fake-IP-Filter
     - RULE-SET,Private_域
   default-nameserver:
@@ -116,7 +116,7 @@ dns:
     - 223.5.5.5
     - 119.29.29.29
   nameserver-policy:
-    "RULE-SET:CN_域,Fake-IP-Filter,Private_域":
+    "RULE-SET:CN_域":
       - 223.5.5.5
       - 119.29.29.29
       - https://dns.alidns.com/dns-query
